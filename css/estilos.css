@@ -1,0 +1,227 @@
+/* Letras */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&display=swap');
+/* Variables */
+:root{
+--green-color:#7ACC2D;
+--white-color:white;
+--black-color: #313337;
+/* Tipografia */
+--normal: 12px;
+/* Espaciado */
+--space: 10px;
+/* BoxShadow */
+--box:  0 0 15px #c1bcbc;
+}
+
+html, body { /* Elimnar los margenes para tener control de toda la ventana. */
+    padding: 0;
+    margin: 0;
+    font-size: var(--normal);
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;/* Separa logo de menu de opciones. */
+    align-items: center;
+    background-color: var(--green-color);
+    padding: var(--space);
+    color: var(--white-color);
+}
+
+nav ul{
+    display:flex
+}
+
+nav li{
+    padding-left: 20px;
+    list-style: none;/* Le quita el estilo default a la lista (puntos).*/
+}
+
+nav li a{
+    text-decoration: none;
+    color: var(--black-color);/* Le asigna el color correcto a anchor(a).*/
+}
+
+nav li a:hover{/* Hover indica el estilo cuando el usuario pasa el mouse por encima. */
+    color: var(--white-color);
+}
+
+p, label{
+    font-size: var(--normal);
+}
+
+/* Main section */
+
+.main_section{
+    margin-bottom: 110px;
+    padding: 2% 5% 20% 5%;
+    text-align: center;
+}
+
+.products{
+    background-image: url("../images/curve.png");
+    height: 50px;
+    background-size: cover;/* Escala la imagen al tamaño del contenedor. */
+    background-position: center top;/* Especifica la alineación de la imagen. */
+    padding: 10%;/* División entre los distintos productos. */
+    display: flex;
+    justify-content: center;
+}
+
+.product{
+    padding: var(--space);/* División entre productos. */
+    margin-top: -300px;/* Hace que la imagen aparezca arriba. */
+
+}
+
+.product .content{
+    background-color: var(--white-color);
+    padding: var(--space);
+    box-shadow: var(--box);/* Sombrea por los bordes del contenedor al color y grueso especificado. */
+}
+
+.product .img_content{
+    text-align: center;/* Alinea las imagenes al centro. */
+}
+
+.main_button{
+    background-color: var(--green-color);
+    width: 100%;/* Ocupa todo el espacio del contenedor. */
+    border-radius: 2px;
+    padding: var(--space);
+    font-size: 17px;
+    color: var(--white-color);
+    cursor: pointer;/* Al pasar el cursor aperece la manita. */
+}
+
+.main_button:hover{
+    background-color: #5E9E22;
+}
+
+.benefits{
+    display: flex;
+    justify-content: center;
+    padding: var(--space);
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.benefit{
+    /* padding: var(--space); */
+    width: 15%;
+    margin: 0 5%;
+    padding: 0 0;
+}
+
+.content_benefit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2px 2px;
+}
+
+.content_benefit img{
+    width: 70%;/* Ajusta la imagen. */
+    height: 100px;
+    margin: 20px 0px;/* Separación mayor entre imagen y descripción. */
+    /* object-fit: cover;
+    object-position: center center; */
+}
+
+.benefit_title{
+    margin: 5px 0px;/* Margen de separación entre textos. */
+    align-self: center;
+}
+
+.mention_head{
+    text-align: center;
+}
+
+.mentions{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.mention{
+    width: 18%;
+    margin: 0 10px;
+    border-radius: 2px;
+}
+
+.content_mention{
+    margin: 0;
+    box-shadow: var(--box);
+}
+
+.mention img{
+    width: 100%;/* Ajusta la imagen. */
+    margin: 0 auto;
+    /* object-fit: cover;
+    object-position: center center; */
+}
+
+.mention_title, .mention_description{
+    margin: 0 0 5px 10px;
+}
+
+footer{
+    background-color: var(--black-color);
+    margin: 0;
+}
+
+.page_end{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5%;
+}
+
+.page_end a{
+    color: var(--green-color);
+    text-decoration: none;
+}
+
+.page_end a:hover{
+    color: var(--white-color);
+    text-decoration: none;
+}
+/* Pagina de producto */
+.product-container{
+    width: 80%;
+    margin: 0% 5%;
+    padding: 0% 5%;
+}
+
+.image-product img{
+    width: 100%;
+}
+
+.product-details{
+    margin: auto 0;
+}
+
+/* Pagina de venta. */
+.payment_module{
+    background-color: var(--white-color);
+    box-shadow: var(--box);/* Efecto de sombras. */
+    padding: var(--space);/* Padding para centrar los elementos internos. */
+}
+
+.payment_module_images{
+    max-width: 150px;/* Evita que la imagen pierda calidad al incrementar su tamaño. */
+    margin: auto;/* Centra la imagen aplicando margenes iguales. */
+}
+
+.module_data{
+    margin: var(--space) auto;/* Espaciado entre los input y el texto del label. */
+    width: 100%;/* Logra que los input ocupen todo el tamaño del contenedor. */
+    box-sizing: border-box;/* Toma como referencia del 100% los margenes de la caja. */
+    height: 35px;/* Hace mas grande el input en altura. */
+    border-radius: 5px;/* Redondea los bordes del input. */
+    border: 1px solid var(--black-color);
+}
